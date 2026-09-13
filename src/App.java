@@ -15,7 +15,24 @@ public class App {
         i.pass=sc.nextInt();
     }
     public static void main(String[] args) throws Exception {
-       login();
+
+        System.out.println(" ========== BANK MANAGEMENT SYSTEM ==========");
+      // login();
+       Scanner sc=new Scanner(System.in);
+       System.out.print("Enter your choice : ");
+       int n=sc.nextInt();
+       switch(n)
+       {
+        case 1 :System.out.println("Login");
+        break;
+        case 2 : System.out.println("create new acc ");
+        break;
+        case 3 : System.out.println("Exit");
+        break;
+        default : System.out.println("Enter valid choice");
+        break;
+
+       }
     }
 }
 class info{
