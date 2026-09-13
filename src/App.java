@@ -1,24 +1,16 @@
 import java.util.Scanner;
 public class App {
 
-    static void login()
-    {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter login details");
-        info i=new info();
-
-       System.out.print("Enter UserName : ");
-       i.username=sc.nextLine();
-       System.out.print("enter Account no : ");
-        i.accno=sc.nextInt();
-        System.out.print("Enter Password : ");
-        i.pass=sc.nextInt();
-    }
+   
     public static void main(String[] args) throws Exception {
 
         System.out.println(" ========== BANK MANAGEMENT SYSTEM ==========");
       // login();
        Scanner sc=new Scanner(System.in);
+       System.out.println("1> login");
+       System.out.println("2> Create account");
+       System.out.println("3> exit");
+       System.out.println();
        System.out.print("Enter your choice : ");
        int n=sc.nextInt();
        switch(n)
@@ -31,13 +23,24 @@ public class App {
         break;
         default : System.out.println("Enter valid choice");
         break;
-
+       }
+        login_page obj =new login_page();
+       if(n==1)
+       {
+          obj.login();
+       }
+      else if(n==2)
+       {
+          // create_acc();
+       }
+       else if(n==3)
+       {
+        return;
+       }
+       else
+       {
+        main(args);
        }
     }
 }
-class info{
-    String username;
-    int accno;
-    int pass;
 
-}
